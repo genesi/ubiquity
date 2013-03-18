@@ -1,0 +1,9 @@
+#! /usr/bin/make -f
+%:
+	dh $@
+
+override_dh_installdebconf:
+	dh_installdebconf
+	echo >> debian/apt-mirror-setup/DEBIAN/templates
+	po2debconf debian/apt-mirror-setup.templates-ubuntu \
+		>> debian/apt-mirror-setup/DEBIAN/templates

@@ -1,0 +1,32 @@
+#! /usr/bin/make -f
+%:
+	dh --with d-i $@
+
+ARCH=$(shell dpkg-architecture -qDEB_HOST_ARCH)
+
+# Add ntfsprogs-udeb and ntfs-3g-udeb for arches that have recent versions
+# of windows. (ntfsprogs-udeb is still needed for ntfsresize.)
+# Perhaps the ntfs-3g-udeb dependency should be in partman-basicfilesystems
+# instead ...
+FS_DEPENDS=
+ifeq ($(ARCH), i386)
+FS_DEPENDS=ntfsprogs-udeb, ntfs-3g-udeb
+endif
+ifeq ($(ARCH), amd64)
+FS_DEPENDS=ntfsprogs-udeb, ntfs-3g-udeb
+endif
+ifeq ($(ARCH), ia64)
+FS_DEPENDS=ntfsprogs-udeb, ntfs-3g-udeb
+endif
+ifeq ($(ARCH), alpha)
+FS_DEPENDS=ntfsprogs-udeb, ntfs-3g-udeb
+endif
+ifeq ($(ARCH), kfreebsd-i386)
+FS_DEPENDS=ntfsprogs-udeb
+endif
+ifeq ($(ARCH), kfreebsd-amd64)
+FS_DEPENDS=ntfsprogs-udeb
+endif
+
+override_dh_gencontrol:
+	dh_gencontrol -- -Vfs:Depends="$(FS_DEPENDS)"
