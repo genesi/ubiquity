@@ -1,3 +1,10 @@
+ubiquity (2.4.8-1genesi2) maverick; urgency=low
+
+  * Backport upstart jobs from ubiquity 2.5.16 to ensure oem-config
+    always starts on first-boot and not just at random
+
+ -- Matt Sealey <matt@genesi-usa.com>  Mon, 18 Mar 2013 13:03:41 -0600
+
 ubiquity (2.4.8) maverick; urgency=low
 
   * Automatic update of included source packages: apt-setup

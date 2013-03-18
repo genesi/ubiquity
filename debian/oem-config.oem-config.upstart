@@ -10,7 +10,7 @@ start on (starting gdm
 	  or starting kdm
 	  or starting xdm
 	  or starting uxlaunch
-	  or stopping rc RUNLEVEL=[2345])
+	  or starting oem-config-debconf)
 stop on (runlevel [06]
 	 or stopping gdm
 	 or stopping kdm
