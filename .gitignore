@@ -1,0 +1,14 @@
+*.o
+*.la
+*.lo
+
+build-locale
+build-stamp
+config.h
+config.log
+config.status
+
+Makefile
+libtool
+
+stamp-*

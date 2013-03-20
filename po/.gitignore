@@ -1,0 +1,6 @@
+stamp-it
+*.gmo
+Makefile
+Makefile.in
+POTFILES
+.intltool-merge-cache
