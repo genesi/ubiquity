@@ -1,3 +1,9 @@
+ubiquity (2.4.8-1genesi3) maverick; urgency=low
+
+  * fix issue with vfat boot partition
+
+ -- Ahmed Ammar <aammar@genesi-usa.com>  Wed, 31 Jul 2013 17:37:55 +0200
+
 ubiquity (2.4.8-1genesi2) maverick; urgency=low
 
   * Backport upstart jobs from ubiquity 2.5.16 to ensure oem-config

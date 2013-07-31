@@ -760,7 +760,7 @@ class Install(install_misc.InstallBase):
                         os.unlink(linkdst)
                     else:
                         continue
-                os.symlink(linksrc, linkdst)
+                """os.symlink(linksrc, linkdst)"""
 
     def configure_bootloader(self):
         """configuring and installing boot loader into installed
