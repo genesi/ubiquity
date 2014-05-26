@@ -1,3 +1,9 @@
+ubiquity (2.4.8-1genesi4) maverick; urgency=low
+
+  * Rebuilt to include custom SPPP keyboard
+
+ -- Chris Jenkins <chris.jenkins@genesi-usa.com>  Mon, 05 May 2014 19:50:45 -0500
+
 ubiquity (2.4.8-1genesi3) maverick; urgency=low
 
   * fix issue with vfat boot partition
